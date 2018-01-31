@@ -72,9 +72,7 @@ Instructions:
     .catch(function(){
       throw Error('Search Request Error');
     })
-    .then(function(planetData){
-      createPlanetThumb(planetData);
-    })
+    .then(createPlanetThumb)
     .catch(function(error){
       addSearchHeader('unknown');
       console.log(error);
